@@ -9,7 +9,7 @@ class ToursModel {
     }
 
     /**
-     * Obtiene la lista de tours dejando en primer lugar las que no fueron finalizadas.
+     * Obtiene la lista de tours.
      */
     public function getAllTours() {
         $query = $this->db->prepare('SELECT * FROM tours');
@@ -29,18 +29,7 @@ class ToursModel {
     }
 
     /**
-     * Retorna una tarea según el id pasado.
-     */
-    public function get($idTour) {
-        $query = $this->db->prepare('SELECT * FROM tours WHERE ID = ?');
-        $query->execute(array($idTour));
-
-        return $query->fetch(PDO::FETCH_OBJ);
-    }
-
-
-    /**
-     * Guarda una tarea en la base de datos.
+     * Guarda un tour en la base de datos.
      */
     function save($id_crucero, $destino, $fecha_salida, $precio, $descripcion, $img1, $img2, $detalles)
     {
@@ -60,7 +49,7 @@ class ToursModel {
     }
  
     /**
-     * Elimina una tarea de la BBDD según el id pasado.
+     * Elimina un tour de la BBDD según el id pasado.
      */
     function delete($idTour) {
         $query = $this->db->prepare('DELETE FROM tours WHERE ID = ?');
@@ -69,7 +58,7 @@ class ToursModel {
 
     /**
      * Actualiza el tour.
-     */
+    */
 
      public function ActualizarTour($tour_id,$id_crucero, $destino, $fecha_salida, $precio, $descripcion, $img1, $img2, $detalles){
         $sentencia =  $this->db->prepare("UPDATE tours SET id_crucero=?, destino=?, fecha_salida=?, precio=?, descripcion=?, img1=?, img2=?, detalles=? WHERE ID=?");
