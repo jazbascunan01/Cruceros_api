@@ -73,4 +73,3 @@ class Router {
         $this->defaultRoute = new Route("", "", $controller, $method);
     }
 }
-
