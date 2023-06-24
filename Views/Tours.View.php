@@ -17,6 +17,7 @@ class ToursView {
     private function _requestStatus($code){
         $status = array(
           200 => "OK",
+          201 => "Created",
           404 => "Not found",
           500 => "Internal Server Error"
         );
