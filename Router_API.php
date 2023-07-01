@@ -26,11 +26,19 @@ $router = new Router();
 /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*
  | Define la tabla de ruteo. |
  *---------------------------*/
+
+//TOURS
 $router->addRoute('/tours', 'GET', 'ToursController', 'getTours');
 $router->addRoute('/tours', 'POST', 'ToursController', 'addTour');
 $router->addRoute('/tours/:ID', 'GET', 'ToursController', 'getTour');
 $router->addRoute('/tours/:ID', 'DELETE', 'ToursController', 'deleteTour');
 $router->addRoute("/tours/:ID", "PUT", "ToursController", 'updateTour');
+//CRUCEROS
+$router->addRoute('/cruceros', 'GET', 'CrucerosController', 'getCruceros');
+$router->addRoute('/cruceros', 'POST', 'CrucerosController', 'addCrucero');
+$router->addRoute('/cruceros/:ID', 'GET', 'CrucerosController', 'getCrucero');
+$router->addRoute('/cruceros/:ID', 'DELETE', 'CrucerosController', 'deleteCrucero');
+$router->addRoute("/cruceros/:ID", "PUT", "CrucerosController", 'updateCrucero');
 /*¯¯¯¯¯¯¯¯¯*
  |  RUTEA. |
  *---------*/
