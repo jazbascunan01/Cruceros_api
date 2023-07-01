@@ -5,4 +5,12 @@ require_once("Api.Controller.php");
 
 class CrucerosController extends ApiController
 {
+    protected $model;
+    protected $view;
+    public function __construct()
+    {
+        $this->view = new CrucerosView();
+        $this->model = new CrucerosModel();
+    }
+
 }
