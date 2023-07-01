@@ -1,7 +1,6 @@
 <?php
 
 abstract class ApiController {
-
     private $data; 
 
     public function __construct() {
