@@ -12,5 +12,10 @@ class CrucerosController extends ApiController
         $this->view = new CrucerosView();
         $this->model = new CrucerosModel();
     }
+    public function getCruceros($params = null)
+    {
+        $cruceros = $this->model->getCruceros();
+        $this->view->response($cruceros, 200);
+    }
 
 }

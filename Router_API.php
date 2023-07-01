@@ -1,6 +1,7 @@
 <?php
 require_once('libs/Router.php');
 require_once('Controllers/Tours.Controller.php');
+require_once('Controllers/Cruceros.Controller.php');
 
 
 /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*
