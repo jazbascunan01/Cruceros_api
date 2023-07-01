@@ -39,4 +39,14 @@ class CrucerosModel
         $query->execute([$nombre, $compania, $capacidad, $origen, $img1, $img2, $descripcion, $detalles]);
         return $this->db->lastInsertId();
     }
+    /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*
+     | Elimina un crucero de la BBDD según el id pasado. |
+     *---------------------------------------------------*/
+    function delete($idCrucero)
+    {
+        $query = $this->db->prepare("DELETE FROM `cruceros` WHERE ID = ?");
+        $query2 = $this->db->prepare("DELETE FROM `tours` WHERE id_crucero = ?");
+        $query2->execute([$idCrucero]);
+        $query->execute([$idCrucero]);
+    }
 }

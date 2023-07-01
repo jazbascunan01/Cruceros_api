@@ -38,4 +38,15 @@ class CrucerosController extends ApiController
 
     }
 
+    public function deleteCrucero($params = null)
+    {
+        $id = $params[':ID'];
+        $crucero = $this->crucerosmodel->getCrucero($id);
+        if ($crucero) {
+            $this->crucerosmodel->delete($id);
+            $this->crucerosview->response("El crucero fue borrado con exito.", 200);
+        } else
+            $this->crucerosview->response("El crucero con el id={$id} no existe", 404);
+    }
+
 }
