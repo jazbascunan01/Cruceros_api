@@ -5,6 +5,13 @@ require_once("Api.Controller.php");
 
 class ToursController extends ApiController
 {
+    protected $model;
+    protected $view;
+    public function __construct()
+    {
+        $this->view = new ToursView();
+        $this->model = new ToursModel();
+    }
 
     public function getTours($params = null)
     {

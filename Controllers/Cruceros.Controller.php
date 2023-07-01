@@ -1,8 +1,8 @@
 <?php
-require_once("Models/Tours.Model.php");
-require_once("Views/Tours.View.php");
+require_once("Models/Cruceros.Model.php");
+require_once("Views/Cruceros.View.php");
 require_once("Api.Controller.php");
 
-class ToursController extends ApiController
+class CrucerosController extends ApiController
 {
 }
