@@ -49,4 +49,26 @@ class CrucerosController extends ApiController
             $this->crucerosview->response("El crucero con el id={$id} no existe", 404);
     }
 
+    public function updateCrucero($params = [])
+    {
+        $crucero_id = $params[':ID'];
+        $crucero = $this->crucerosmodel->getCrucero($crucero_id);
+
+        if ($crucero) {
+            $body = $this->getData();
+
+            $nombre= $body->nombre;
+            $compania= $body->compania;
+            $capacidad= $body->capacidad;
+            $origen= $body->origen;
+            $img1= $body->img1;
+            $img2= $body->img2;
+            $descripcion= $body->descripcion;
+            $detalles= $body->detalles;
+            $crucero = $this->crucerosmodel->ActualizarCrucero($crucero_id, $nombre, $compania, $capacidad, $origen, $img1, $img2, $descripcion, $detalles);
+            $this->crucerosview->response("Crucero id=$crucero_id actualizado con éxito", 200);
+        } else
+            $this->crucerosview->response("Crucero id=$crucero_id not found", 404);
+    }
+
 }

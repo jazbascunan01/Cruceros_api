@@ -49,4 +49,13 @@ class CrucerosModel
         $query2->execute([$idCrucero]);
         $query->execute([$idCrucero]);
     }
+
+    /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*
+     | Actualiza el crucero. |
+     *-----------------------*/
+    public function ActualizarCrucero($crucero_id, $nombre, $compania, $capacidad, $origen, $img1, $img2, $descripcion, $detalles)
+    {
+        $query = $this->db->prepare('UPDATE cruceros SET nombre=?, compania=?, capacidad=?, origen=?, img1=?, img2=?, descripcion=?, detalles=? WHERE ID = ?');
+        $query->execute([$nombre, $compania, $capacidad, $origen, $img1, $img2, $descripcion, $detalles, $crucero_id]);
+    }
 }
