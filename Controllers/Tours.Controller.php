@@ -5,18 +5,11 @@ require_once("Api.Controller.php");
 
 class ToursController extends ApiController
 {
-    protected $model;
-    protected $view;
-    public function __construct()
-    {
-        $this->view = new ToursView();
-        $this->model = new ToursModel();
-    }
 
     public function getTours($params = null)
     {
-        $tours = $this->model->getAllTours();
-        $this->view->response($tours, 200);
+        $tours = $this->toursmodel->getAllTours();
+        $this->toursview->response($tours, 200);
     }
 
 
@@ -25,22 +18,22 @@ class ToursController extends ApiController
     {
         $id = $params[':ID'];
 
-        $tour = $this->model->getTour($id);
+        $tour = $this->toursmodel->getTour($id);
         if ($tour)
-            $this->view->response($tour, 200);
+            $this->toursview->response($tour, 200);
         else
-            $this->view->response("El tour con el id={$id} no existe", 404);
+            $this->toursview->response("El tour con el id={$id} no existe", 404);
     }
 
     public function deleteTour($params = null)
     {
         $id = $params[':ID'];
-        $tour = $this->model->getTour($id);
+        $tour = $this->toursmodel->getTour($id);
         if ($tour) {
-            $this->model->delete($id);
-            $this->view->response("El tour fue borrado con exito.", 200);
+            $this->toursmodel->delete($id);
+            $this->toursview->response("El tour fue borrado con exito.", 200);
         } else
-            $this->view->response("El tour con el id={$id} no existe", 404);
+            $this->toursview->response("El tour con el id={$id} no existe", 404);
     }
 
     public function addTour($params = [])
@@ -48,15 +41,15 @@ class ToursController extends ApiController
         $tour = $this->getData(); // la obtengo del body
 
         // inserta el tour
-        $tour_id = $this->model->save($tour->id_crucero, $tour->destino, $tour->fecha_salida, $tour->precio, $tour->descripcion, $tour->img1, $tour->img2, $tour->detalles);
+        $tour_id = $this->toursmodel->save($tour->id_crucero, $tour->destino, $tour->fecha_salida, $tour->precio, $tour->descripcion, $tour->img1, $tour->img2, $tour->detalles);
 
         // obtengo el tour recien creada
-        $tourNuevo = $this->model->getTour($tour_id);
+        $tourNuevo = $this->toursmodel->getTour($tour_id);
 
         if ($tourNuevo)
-            $this->view->response($tourNuevo, 200);
+            $this->toursview->response($tourNuevo, 200);
         else
-            $this->view->response("Error al insertar tour", 500);
+            $this->toursview->response("Error al insertar tour", 500);
 
     }
 
@@ -64,7 +57,7 @@ class ToursController extends ApiController
     public function updateTour($params = [])
     {
         $tour_id = $params[':ID'];
-        $tour = $this->model->getTour($tour_id);
+        $tour = $this->toursmodel->getTour($tour_id);
 
         if ($tour) {
             $body = $this->getData();
@@ -77,10 +70,10 @@ class ToursController extends ApiController
             $img1 = $body->img1;
             $img2 = $body->img2;
             $detalles = $body->detalles;
-            $tour = $this->model->ActualizarTour($tour_id, $id_crucero, $destino, $fecha_salida, $precio, $descripcion, $img1, $img2, $detalles);
-            $this->view->response("Tour id=$tour_id actualizado con éxito", 200);
+            $tour = $this->toursmodel->ActualizarTour($tour_id, $id_crucero, $destino, $fecha_salida, $precio, $descripcion, $img1, $img2, $detalles);
+            $this->toursview->response("Tour id=$tour_id actualizado con éxito", 200);
         } else
-            $this->view->response("Tour id=$tour_id not found", 404);
+            $this->toursview->response("Tour id=$tour_id not found", 404);
     }
 
 }

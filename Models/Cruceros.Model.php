@@ -29,4 +29,20 @@ class CrucerosModel
         $query->execute([$id]);
         return $query->fetchAll();
     }
+
+    /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*
+     | Guarda un crucero en la base de datos. |
+     *----------------------------------------*/
+    function save($nombre, $compania, $capacidad, $origen, $img1, $img2, $descripcion, $detalles)
+    {
+        $query = $this->db->prepare('INSERT INTO cruceros(nombre, compania, capacidad, origen, img1, img2, descripcion, detalles) VALUES(?,?,?,?,?,?,?,?)');
+        $query->execute([$nombre, $compania, $capacidad, $origen, $img1, $img2, $descripcion, $detalles]);
+        return $this->db->lastInsertId();
+    }
+    private function uploadImage($image)
+    {
+        $target = "img/task/" . uniqid() . "." . strtolower(pathinfo($image['name'], PATHINFO_EXTENSION));
+        move_uploaded_file($image['tmp_name'], $target);
+        return $target;
+    }
 }
