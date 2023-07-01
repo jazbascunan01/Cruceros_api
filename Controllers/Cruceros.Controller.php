@@ -18,4 +18,15 @@ class CrucerosController extends ApiController
         $this->view->response($cruceros, 200);
     }
 
+    public function getCrucero($params = null)
+    {
+        $id = $params[':ID'];
+
+        $crucero = $this->model->getCrucero($id);
+        if ($crucero)
+            $this->view->response($crucero, 200);
+        else
+            $this->view->response("El crucero con el id={$id} no existe", 404);
+    }
+
 }
