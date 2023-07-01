@@ -39,10 +39,4 @@ class CrucerosModel
         $query->execute([$nombre, $compania, $capacidad, $origen, $img1, $img2, $descripcion, $detalles]);
         return $this->db->lastInsertId();
     }
-    private function uploadImage($image)
-    {
-        $target = "img/task/" . uniqid() . "." . strtolower(pathinfo($image['name'], PATHINFO_EXTENSION));
-        move_uploaded_file($image['tmp_name'], $target);
-        return $target;
-    }
 }
