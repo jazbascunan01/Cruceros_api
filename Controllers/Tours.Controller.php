@@ -47,10 +47,10 @@ class ToursController extends ApiController
     {
         $tour = $this->getData(); // la obtengo del body
 
-        // inserta la tarea
+        // inserta el tour
         $tour_id = $this->model->save($tour->id_crucero, $tour->destino, $tour->fecha_salida, $tour->precio, $tour->descripcion, $tour->img1, $tour->img2, $tour->detalles);
 
-        // obtengo la recien creada
+        // obtengo el tour recien creada
         $tourNuevo = $this->model->getTour($tour_id);
 
         if ($tourNuevo)
