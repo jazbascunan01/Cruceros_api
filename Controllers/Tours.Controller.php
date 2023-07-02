@@ -21,8 +21,6 @@ class ToursController extends ApiController
         if ($this->verificarAtributos($criterio)) {
             if (isset($_REQUEST['orden']) && !empty($_REQUEST['orden'])) {
                 $orden = $_REQUEST['orden'];
-                echo($orden);
-                echo($criterio);
                 $tours= $this->toursmodel->GetSortedTours($criterio, $orden);
                 $this->toursview->response($tours, 200);
             } else {
