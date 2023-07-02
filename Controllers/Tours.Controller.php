@@ -8,10 +8,37 @@ class ToursController extends ApiController
 
     public function getTours($params = null)
     {
+        if (isset($_REQUEST['criterio'])){
+            $tours = $this->GetSortedTours($_REQUEST['criterio']); 
+        }else{
         $tours = $this->toursmodel->getAllTours();
         $this->toursview->response($tours, 200);
+        }
     }
 
+    public function GetSortedTours($criterio)
+    {
+        if ($this->verificarAtributos($criterio)) {
+            if (isset($_REQUEST['orden']) && !empty($_REQUEST['orden'])) {
+                $orden = $_REQUEST['orden'];
+                echo($orden);
+                echo($criterio);
+                $tours= $this->toursmodel->GetSortedTours($criterio, $orden);
+                $this->toursview->response($tours, 200);
+            } else {
+                $orden = "ASC"; // se ordena ascendente por defecto
+                $tours= $this->toursmodel->GetSortedTours($criterio, $orden);
+                $this->toursview->response($tours, 200);
+            }
+        } else {
+            return $this->toursview->response("Verificar la columna/atributo de la tabla elegida como criterio", 404);
+        }
+    }
+    
+    public function verificarAtributos($filtro){
+        $atributos = $this->toursmodel->obtenerColumnas();
+        return (in_array($filtro, array_column($atributos, 'column_name')));
+    }
 
 
     public function getTour($params = null)

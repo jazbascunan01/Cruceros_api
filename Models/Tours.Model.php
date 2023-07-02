@@ -59,5 +59,19 @@ class ToursModel
         return $sentencia->execute(array($id_crucero, $destino, $fecha_salida, $precio, $descripcion, $img1, $img2, $detalles, $tour_id));
     }
 
+    public function GetSortedTours($criterio, $orden)
+    {
+        $query = $this->db->prepare("SELECT * FROM tours ORDER BY $criterio $orden");
+        $query->execute();
+        $tours = $query->fetchAll(PDO::FETCH_ASSOC);
+        return $tours;
+    }
+    public function obtenerColumnas()
+    {
+        $sentencia = $this->db->prepare('SELECT column_name FROM information_schema.columns WHERE table_name = :table_name');
+        $sentencia->execute([':table_name' => 'tours']);
+        return $sentencia->fetchAll();
+    }
+
 
 }
