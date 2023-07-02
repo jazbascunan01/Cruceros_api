@@ -58,7 +58,9 @@ class ToursModel
         $sentencia = $this->db->prepare("UPDATE tours SET id_crucero=?, destino=?, fecha_salida=?, precio=?, descripcion=?, img1=?, img2=?, detalles=? WHERE ID=?");
         return $sentencia->execute(array($id_crucero, $destino, $fecha_salida, $precio, $descripcion, $img1, $img2, $detalles, $tour_id));
     }
-
+    /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*
+     |  Ordena los tours. |
+     *--------------------*/
     public function GetSortedTours($criterio, $orden)
     {
         $query = $this->db->prepare("SELECT * FROM tours ORDER BY $criterio $orden");
@@ -66,12 +68,27 @@ class ToursModel
         $tours = $query->fetchAll(PDO::FETCH_ASSOC);
         return $tours;
     }
+    /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*
+     | Obtiene columnas de la tabla. |
+     *-------------------------------*/
     public function obtenerColumnas()
     {
         $sentencia = $this->db->prepare('SELECT column_name FROM information_schema.columns WHERE table_name = :table_name');
         $sentencia->execute([':table_name' => 'tours']);
         return $sentencia->fetchAll();
     }
+    /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*
+     |  Filtrar los tours. |
+     *---------------------*/
+    public function GetFilteredTours($filtro, $valor) {
+        $sql = "SELECT * FROM tours WHERE $filtro = :valor";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':valor', $valor);
+        $stmt->execute();
+        $tours = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $tours;
+    }
+    
 
 
 }

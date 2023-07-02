@@ -8,32 +8,52 @@ class ToursController extends ApiController
 
     public function getTours($params = null)
     {
-        if (isset($_REQUEST['criterio'])){
-            $tours = $this->GetSortedTours($_REQUEST['criterio']); 
-        }else{
-        $tours = $this->toursmodel->getAllTours();
-        $this->toursview->response($tours, 200);
+        if (isset($_REQUEST['criterio'])) {
+            $tours = $this->GetSortedTours($_REQUEST['criterio']);
+        } else {
+            if (isset($_REQUEST['filtrar'])) {
+                $tours = $this->GetFilteredTours($_REQUEST['filtrar']);
+            } else {
+                $tours = $this->toursmodel->getAllTours();
+                $this->toursview->response($tours, 200);
+            }
         }
     }
 
     public function GetSortedTours($criterio)
     {
-        if ($this->verificarAtributos($criterio)) {
+        if ($this->verifyAttributes($criterio)) {
             if (isset($_REQUEST['orden']) && !empty($_REQUEST['orden'])) {
                 $orden = $_REQUEST['orden'];
-                $tours= $this->toursmodel->GetSortedTours($criterio, $orden);
+                $tours = $this->toursmodel->GetSortedTours($criterio, $orden);
                 $this->toursview->response($tours, 200);
             } else {
                 $orden = "ASC"; // se ordena ascendente por defecto
-                $tours= $this->toursmodel->GetSortedTours($criterio, $orden);
+                $tours = $this->toursmodel->GetSortedTours($criterio, $orden);
                 $this->toursview->response($tours, 200);
             }
         } else {
             return $this->toursview->response("Verificar la columna/atributo de la tabla elegida como criterio", 404);
         }
     }
-    
-    public function verificarAtributos($filtro){
+
+    public function GetFilteredTours($filtro)
+    {
+        if ($this->verifyAttributes($filtro) && isset($_REQUEST['valor'])) {
+            $tours = $this->toursmodel->GetFilteredTours($filtro, $_REQUEST['valor']);
+            if ($tours) {
+                $this->toursview->response($tours, 200);
+            } else {
+                $this->toursview->response("No se encontraron tours filtrados", 404);
+            }
+        } else {
+            return $this->toursview->response("Verificar el filtro y el valor del filtro", 400);
+        }
+    }
+
+
+    public function verifyAttributes($filtro)
+    {
         $atributos = $this->toursmodel->obtenerColumnas();
         return (in_array($filtro, array_column($atributos, 'column_name')));
     }
