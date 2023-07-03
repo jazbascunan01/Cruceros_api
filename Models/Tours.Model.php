@@ -80,7 +80,8 @@ class ToursModel
     /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*
      |  Filtrar los tours. |
      *---------------------*/
-    public function GetFilteredTours($filtro, $valor) {
+    public function GetFilteredTours($filtro, $valor)
+    {
         $sql = "SELECT * FROM tours WHERE $filtro = :valor";
         $stmt = $this->db->prepare($sql);
         $stmt->bindValue(':valor', $valor);
@@ -88,7 +89,20 @@ class ToursModel
         $tours = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $tours;
     }
-    
+
+    public function getPaginatedTours($inicio, $filas)
+    {
+        $sql = "SELECT * FROM tours LIMIT $inicio, $filas";
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        $tours = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $tours;
+    }
+    public function getTotalRecords(){
+        $query = $this->db->prepare ("SELECT count(*) FROM tours");
+        $query->execute();
+        return $query->fetchColumn(); 
+    }
 
 
 }

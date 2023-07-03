@@ -14,8 +14,13 @@ class ToursController extends ApiController
             if (isset($_REQUEST['filtrar'])) {
                 $tours = $this->GetFilteredTours($_REQUEST['filtrar']);
             } else {
-                $tours = $this->toursmodel->getAllTours();
-                $this->toursview->response($tours, 200);
+                if (isset($_REQUEST['pagina']) && isset($_REQUEST['filas'])) {
+                    $tours = $this->paginate($_REQUEST['pagina'], $_REQUEST['filas']);
+                    $this->toursview->response($tours, 200);
+                } else {
+                    $tours = $this->toursmodel->getAllTours();
+                    $this->toursview->response($tours, 200);
+                }
             }
         }
     }
@@ -51,6 +56,22 @@ class ToursController extends ApiController
         }
     }
 
+    public function paginate($pagina, $filas)
+    {
+        if (!empty($pagina) && !empty($filas) && $pagina > 0 && $filas > 0 && is_numeric($pagina) && is_numeric($filas)) {
+            $cantidad = $this->toursmodel->getTotalRecords();
+            if ($pagina <= $cantidad / $filas) {
+                $inicio = $filas * ($pagina - 1);
+                $tours = $this->toursmodel->getPaginatedTours($inicio, $filas);
+                echo("HOLA");
+                return $tours;
+            } else {
+                return $this->toursview->response("La página solicitada con esa cantidad de filas no contiene elementos", 404);
+            }
+        } else {
+            return $this->toursview->response("Verificar la forma de los parámetros utilizados", 404);
+        }
+    }
 
     public function verifyAttributes($filtro)
     {
