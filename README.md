@@ -103,24 +103,24 @@ La API utiliza un mecanismo de autenticación basado en tokens para asegurar el 
 El token de acceso se obtiene mediante el siguiente endpoint:
 `POST /usuarios`
 Enviando las credenciales de usuario (nombre de usuario y contraseña) en el cuerpo de la solicitud. Si las credenciales son válidas, se devuelve un token de acceso que debe utilizarse en las solicitudes posteriores.
-###### Ruta para obtener el token: 
+#### Ruta para obtener el token: 
 `POST /usuarios`
-###### Cuerpo de la solicitud:
+#### Cuerpo de la solicitud:
     {
 	    "nombre_usuario":"admin@admin.com",
 	    "password":"admin"
     }
-###### Respuesta:
+#### Respuesta:
 
     {
 		"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODQ5MTI3NSwiZXhwIjoxNjg4NDkzMDc1LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.AlnKx38bPmhtVsZ4e4MEI32WD+z4IFAr8sBvAvvxksc="
     }
 
-##### Uso del Token de Acceso
+### Uso del Token de Acceso
 
 Una vez que hayas obtenido el token de acceso, debes incluirlo en el encabezado Authorization indicando el tipo `Bearer Token` de todas tus solicitudes a los recursos protegidos.
 
-##### Expiración del Token
+### Expiración del Token
 
 El token de acceso tiene una fecha de vencimiento, lo que significa que después de un tiempo, el token ya no será válido y deberás solicitar un nuevo token. La fecha de vencimiento es 30 minutos luego de solicitarlo.
 
