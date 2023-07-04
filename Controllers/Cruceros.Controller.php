@@ -17,7 +17,7 @@ class CrucerosController extends ApiController
                     $cruceros = $this->paginate($_REQUEST['pagina'], $_REQUEST['filas']);
                     $this->crucerosview->response($cruceros, 200);
                 } else {
-                    $cruceros = $this->crucerosmodel->getAllCruceros();
+                    $cruceros = $this->crucerosmodel->getcruceros();
                     $this->crucerosview->response($cruceros, 200);
                 }
             }
