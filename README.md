@@ -39,12 +39,13 @@
 
 
 5. [Tabla de ruteo](#tabla-de-ruteo)
+6. [Códigos de error](#c%C3%B3digos-de-error)
 
-6. [Ejemplos de Uso](#ejemplos-de-uso)
-7. [Relación entre Cruceros y Tours](#-relaci%C3%B3n-entre-cruceros-y-tours)
+7. [Ejemplos de Uso](#ejemplos-de-uso)
+8. [Relación entre Cruceros y Tours](#-relaci%C3%B3n-entre-cruceros-y-tours)
 
-8. [Conclusiones](#conclusiones)
-9. [Autor](#autor)
+9. [Conclusiones](#conclusiones)
+10. [Autor](#autor)
 
 ---------------------------------------------------------------
 
@@ -372,7 +373,26 @@ Este método permite eliminar un tour específico.
 -----------------------------------------------
 </div>
 
+--------------------------------------------------
+## <h2 align="center">Códigos de error</h2>
+
+------------------------------------------
+<div align="center">
+
+| Código de Estado | Descripción                                       |
+|-----------------|--------------------------------------------------|
+| 200 OK          | La solicitud se ha procesado correctamente.      |
+| 201 Created     | La solicitud se ha completado y se ha creado un nuevo recurso como resultado. |
+| 400 Bad Request | La solicitud no se pudo entender o tenía parámetros inválidos. |
+| 401 Unauthorized | No se proporcionaron credenciales de autenticación válidas para acceder al recurso. |
+| 404 Not Found   | El recurso solicitado no se encontró en el servidor. |
+| 500 Internal Server Error | Se produjo un error interno en el servidor al procesar la solicitud. |
+
+
 --------------------------
+</div>
+
+---------------
 
 ### <h2 align="center">Ejemplos de Uso</h2>
 
