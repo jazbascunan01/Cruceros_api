@@ -41,7 +41,7 @@ $router->addRoute('/cruceros', 'POST', 'CrucerosController', 'addCrucero');
 $router->addRoute('/cruceros/:ID', 'GET', 'CrucerosController', 'getCrucero');
 $router->addRoute('/cruceros/:ID', 'DELETE', 'CrucerosController', 'deleteCrucero');
 $router->addRoute("/cruceros/:ID", "PUT", "CrucerosController", 'updateCrucero');
-
+//USUARIOS
 $router->addRoute('usuarios','POST','UsuariosController','login');
 /*¯¯¯¯¯¯¯¯¯*
  |  RUTEA. |
