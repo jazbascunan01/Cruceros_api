@@ -8,12 +8,10 @@ abstract class ApiController {
     private $data; 
 
     public function __construct() {
-        $this->view = new ToursView();
-        $this->view = new CrucerosView();
         $this->data = file_get_contents("php://input"); 
         $this->toursmodel = new ToursModel();
         $this->crucerosmodel = new CrucerosModel();
-        $this -> view = new UsuariosView();
+        $this -> view = new ApiView();
         $this -> usuariosmodel = new UsuariosModel();
     }
     function getData(){ 
