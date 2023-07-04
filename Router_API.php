@@ -2,6 +2,7 @@
 require_once('libs/Router.php');
 require_once('Controllers/Tours.Controller.php');
 require_once('Controllers/Cruceros.Controller.php');
+require_once('Controllers/Usuarios.Controller.php');
 
 
 /*¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯*
@@ -40,6 +41,8 @@ $router->addRoute('/cruceros', 'POST', 'CrucerosController', 'addCrucero');
 $router->addRoute('/cruceros/:ID', 'GET', 'CrucerosController', 'getCrucero');
 $router->addRoute('/cruceros/:ID', 'DELETE', 'CrucerosController', 'deleteCrucero');
 $router->addRoute("/cruceros/:ID", "PUT", "CrucerosController", 'updateCrucero');
+
+$router->addRoute('usuarios','POST','UsuariosController','login');
 /*¯¯¯¯¯¯¯¯¯*
  |  RUTEA. |
  *---------*/
