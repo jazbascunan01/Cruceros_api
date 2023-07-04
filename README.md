@@ -878,9 +878,24 @@ La tabla tours almacena la información de los tours asociados a cada crucero. T
 
 ## **La relación entre las tablas se establece mediante la columna id_crucero en la tabla tours, que es una clave foránea que hace referencia al campo id en la tabla cruceros. Esto permite asociar varios tours a un crucero específico.**
 
+-----------------------------
 
 ## <h2 align="center">Conclusiones</h2>
+
+---------------------------
 
 La API RESTful proporciona una interfaz para administrar los cruceros y tours de una aplicación de turismo marítimo. Los métodos GET, POST, PUT y DELETE permiten realizar operaciones de lectura, creación, actualización y eliminación de cruceros y tours. Además, se pueden aplicar filtros, ordenamientos y paginación al obtener la lista de cruceros para facilitar la búsqueda y la presentación de resultados. La API es flexible y fácil de usar, lo que permite una integración eficiente con otras aplicaciones o sistemas que requieran acceso a los datos de cruceros y tours.
 El uso del token de acceso es necesario para acceder a los recursos protegidos de la API. Asegúrate de incluir el encabezado Authorization con el valor del token de acceso en todas tus solicitudes a los recursos protegidos.
 Recuerda que el token de acceso tiene una fecha de vencimiento y deberás solicitar un nuevo token cuando sea necesario.
+
+-------------------------------------------
+
+## <h2 align="center">Autor</h2>
+
+-------------------------------------
+
+* Nombre: Bascuñan Karen Jazmín
+* Carrera: Tecnicatura Universitaria en Desarrollo de Aplicaciones Informáticas
+* Universidad: Universidad Nacional del Centro de la Provincia de Buenos Aires
+
+
