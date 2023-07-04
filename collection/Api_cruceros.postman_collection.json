@@ -1,0 +1,970 @@
+{
+	"info": {
+		"_postman_id": "5defd653-45a4-4260-b80c-a9d42b1e2f08",
+		"name": "Api_cruceros",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24234675"
+	},
+	"item": [
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t  \"nombre\": \"Nuevo Crucero\",\r\n\t  \"compania\": \"Royal Caribean\",\r\n\t  \"capacidad\": 150,\r\n\t   \"origen\": \"Bahamas\",\r\n\t  \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n\t  \"img2\":\"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n\t  \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n\t  \"detalles\":\"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/tours",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"tours"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t  \"nombre\": \"Nuevo Crucero\",\r\n\t  \"compania\": \"Royal Caribean\",\r\n\t  \"capacidad\": 150,\r\n\t   \"origen\": \"Bahamas\",\r\n\t  \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n\t  \"img2\":\"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n\t  \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n\t  \"detalles\":\"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/tours",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"tours"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t  \"nombre\": \"Nuevo Crucero\",\r\n\t  \"compania\": \"Royal Caribean\",\r\n\t  \"capacidad\": 150,\r\n\t   \"origen\": \"Bahamas\",\r\n\t  \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n\t  \"img2\":\"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n\t  \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n\t  \"detalles\":\"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/tours/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"tours",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t  \"nombre\": \"Nuevo Crucero\",\r\n\t  \"compania\": \"Royal Caribean\",\r\n\t  \"capacidad\": 150,\r\n\t   \"origen\": \"Bahamas\",\r\n\t  \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n\t  \"img2\":\"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n\t  \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n\t  \"detalles\":\"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/cruceros/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"cruceros",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t  \"nombre\": \"Nuevo Crucero\",\r\n\t  \"compania\": \"Royal Caribean\",\r\n\t  \"capacidad\": 150,\r\n\t   \"origen\": \"Bahamas\",\r\n\t  \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n\t  \"img2\":\"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n\t  \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n\t  \"detalles\":\"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/cruceros/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"cruceros",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\t\"id_crucero\": 1,\r\n\t\t\"1\": 1,\r\n\t\t\"destino\": \"Bahamas\",\r\n\t\t\"fecha_salida\": \"2023-06-01\",\r\n\t\t\"precio\": 1200,\r\n\t\t\"descripcion\": \"Embárcate en un emocionante crucero a las Bahamas y sumérgete en aguas cristalinas, playas de ensueño y una vibrante cultura caribeña. Disfruta de actividades acuáticas, relájate en paradisíacas playas y descubre su belleza tropical.\",\r\n\t\t\"img1\": \"https://w0.peakpx.com/wallpaper/288/293/HD-wallpaper-bahamas-ocean-bahamas-nature-sky-blue.jpg\",\r\n\t\t\"img2\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n\t\t\"detalles\": \"El crucero Oasis of the Seas dispone de una variada oferta de entretenimiento a bordo protagonizada por un teatro, casino, discoteca, cine en 3D, biblioteca, sala de videojuegos, punto de internet, sala de cartas, oficina de excursiones, miniclub y área de shopping.\\r\\n\\r\\nEl Oasis of the Seas incluye 4 piscinas, 10 Jacuzzis, parque acuático para niños, solarium, spa y salón de belleza, área wellness, gimnasio, tirolina suspendida a nueve cubiertas de 25 m de largo, 2 simuladores de surf, pista de patinaje sobre hielo, 2 paredes de escalada de 13 m, simulador de golf, cancha de baloncesto, pista de jogging al aire libre, minigolf y dispone de instalaciones, clubs y zonas de entretenimiento para niños y jóvenes.\\r\\n\\r\\nAdemás cuenta con servicios de guardería.\\r\\n\\r\\nA bordo también hay actividades que se ajustas a todas las edades y gustos. Los niños de 6 a 18 meses podrán disfrutar con sus padres del programa Royal Babies & Royal Tots, los niños de 3 a 5 años se divertirán realizando geniales experimentos y se convertirán en pequeños aventureros de la ciencia. El programa Explorers (6 a 8 años de edad) está lleno de emocionantes actividades, desde fiestas temáticas hasta la fabricación de caramelos. Los Voyagers (9 a 11 años de edad) explorarán diversas actividades que le devuelven la diversión al aprendizaje.\\r\\n\\r\\nCon la experiencia Dreamworks los niños podrán compartir momentos inolvidables con los personajes de DreamWorks y disfrutar de entretenidas actividades como cuenta cuentos, fiestas de baile, desfiles y espectáculos de patinaje sobre hielo.\\r\\n\\r\\nLos adolescentes tendrán también sus propios espacios y una gran variedad de actividades.\\r\\n\\r\\nLa oferta de restauración a bordo del Oasis of the Seas incluye, entre otros, los siguientes restaurantes: el Restaurante principal, el restaurante 150 Central Park, Chops Grille, Bar Sabor Taquería & Tequila, Izumi Hibach y Sushi y el restaurante italiano Giovanni’s Table así como con 15 bares y salones.\"\r\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/tours/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"tours",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\t\"id_crucero\": 1,\r\n\t\t\"1\": 1,\r\n\t\t\"destino\": \"Bahamas Actualizado\",\r\n\t\t\"fecha_salida\": \"2023-09-01\",\r\n\t\t\"precio\": 2000,\r\n\t\t\"descripcion\": \"Embárcate en un emocionante crucero a las Bahamas y sumérgete en aguas cristalinas, playas de ensueño y una vibrante cultura caribeña. Disfruta de actividades acuáticas, relájate en paradisíacas playas y descubre su belleza tropical.\",\r\n\t\t\"img1\": \"https://w0.peakpx.com/wallpaper/288/293/HD-wallpaper-bahamas-ocean-bahamas-nature-sky-blue.jpg\",\r\n\t\t\"img2\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n\t\t\"detalles\": \"El crucero Oasis of the Seas dispone de una variada oferta de entretenimiento a bordo protagonizada por un teatro, casino, discoteca, cine en 3D, biblioteca, sala de videojuegos, punto de internet, sala de cartas, oficina de excursiones, miniclub y área de shopping.\\r\\n\\r\\nEl Oasis of the Seas incluye 4 piscinas, 10 Jacuzzis, parque acuático para niños, solarium, spa y salón de belleza, área wellness, gimnasio, tirolina suspendida a nueve cubiertas de 25 m de largo, 2 simuladores de surf, pista de patinaje sobre hielo, 2 paredes de escalada de 13 m, simulador de golf, cancha de baloncesto, pista de jogging al aire libre, minigolf y dispone de instalaciones, clubs y zonas de entretenimiento para niños y jóvenes.\\r\\n\\r\\nAdemás cuenta con servicios de guardería.\\r\\n\\r\\nA bordo también hay actividades que se ajustas a todas las edades y gustos. Los niños de 6 a 18 meses podrán disfrutar con sus padres del programa Royal Babies & Royal Tots, los niños de 3 a 5 años se divertirán realizando geniales experimentos y se convertirán en pequeños aventureros de la ciencia. El programa Explorers (6 a 8 años de edad) está lleno de emocionantes actividades, desde fiestas temáticas hasta la fabricación de caramelos. Los Voyagers (9 a 11 años de edad) explorarán diversas actividades que le devuelven la diversión al aprendizaje.\\r\\n\\r\\nCon la experiencia Dreamworks los niños podrán compartir momentos inolvidables con los personajes de DreamWorks y disfrutar de entretenidas actividades como cuenta cuentos, fiestas de baile, desfiles y espectáculos de patinaje sobre hielo.\\r\\n\\r\\nLos adolescentes tendrán también sus propios espacios y una gran variedad de actividades.\\r\\n\\r\\nLa oferta de restauración a bordo del Oasis of the Seas incluye, entre otros, los siguientes restaurantes: el Restaurante principal, el restaurante 150 Central Park, Chops Grille, Bar Sabor Taquería & Tequila, Izumi Hibach y Sushi y el restaurante italiano Giovanni’s Table así como con 15 bares y salones.\"\r\n\t}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/tours/62",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"tours",
+						"62"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"Nuevo Crucero Actualizado\",\r\n        \"compania\": \"Royal Caribean\",\r\n        \"capacidad\": 150,\r\n        \"origen\": \"Bahamas\",\r\n        \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n        \"img2\": \"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n        \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n        \"detalles\": \"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/cruceros/28",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"cruceros",
+						"28"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"Nuevo Crucero Actualizado\",\r\n        \"compania\": \"Royal Caribean\",\r\n        \"capacidad\": 150,\r\n        \"origen\": \"Bahamas\",\r\n        \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n        \"img2\": \"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n        \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n        \"detalles\": \"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/cruceros/28",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"cruceros",
+						"28"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"Nuevo Crucero Actualizado\",\r\n        \"compania\": \"Royal Caribean\",\r\n        \"capacidad\": 150,\r\n        \"origen\": \"Bahamas\",\r\n        \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n        \"img2\": \"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n        \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n        \"detalles\": \"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/tours/62",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"tours",
+						"62"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"Nuevo Crucero Actualizado\",\r\n        \"compania\": \"Royal Caribean\",\r\n        \"capacidad\": 150,\r\n        \"origen\": \"Bahamas\",\r\n        \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n        \"img2\": \"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n        \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n        \"detalles\": \"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/tours?pagina=1&filas=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"tours"
+					],
+					"query": [
+						{
+							"key": "pagina",
+							"value": "1"
+						},
+						{
+							"key": "filas",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"Nuevo Crucero Actualizado\",\r\n        \"compania\": \"Royal Caribean\",\r\n        \"capacidad\": 150,\r\n        \"origen\": \"Bahamas\",\r\n        \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n        \"img2\": \"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n        \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n        \"detalles\": \"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/tours?pagina=2&filas=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"tours"
+					],
+					"query": [
+						{
+							"key": "pagina",
+							"value": "2"
+						},
+						{
+							"key": "filas",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"Nuevo Crucero Actualizado\",\r\n        \"compania\": \"Royal Caribean\",\r\n        \"capacidad\": 150,\r\n        \"origen\": \"Bahamas\",\r\n        \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n        \"img2\": \"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n        \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n        \"detalles\": \"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/cruceros?pagina=2&filas=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"cruceros"
+					],
+					"query": [
+						{
+							"key": "pagina",
+							"value": "2"
+						},
+						{
+							"key": "filas",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"Nuevo Crucero Actualizado\",\r\n        \"compania\": \"Royal Caribean\",\r\n        \"capacidad\": 150,\r\n        \"origen\": \"Bahamas\",\r\n        \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n        \"img2\": \"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n        \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n        \"detalles\": \"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/cruceros?pagina=1&filas=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"cruceros"
+					],
+					"query": [
+						{
+							"key": "pagina",
+							"value": "1"
+						},
+						{
+							"key": "filas",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"Nuevo Crucero Actualizado\",\r\n        \"compania\": \"Royal Caribean\",\r\n        \"capacidad\": 150,\r\n        \"origen\": \"Bahamas\",\r\n        \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n        \"img2\": \"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n        \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n        \"detalles\": \"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/tours?criterio=ID&orden=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"tours"
+					],
+					"query": [
+						{
+							"key": "criterio",
+							"value": "ID"
+						},
+						{
+							"key": "orden",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"Nuevo Crucero Actualizado\",\r\n        \"compania\": \"Royal Caribean\",\r\n        \"capacidad\": 150,\r\n        \"origen\": \"Bahamas\",\r\n        \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n        \"img2\": \"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n        \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n        \"detalles\": \"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/tours?criterio=fecha_salida&orden=asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"tours"
+					],
+					"query": [
+						{
+							"key": "criterio",
+							"value": "fecha_salida"
+						},
+						{
+							"key": "orden",
+							"value": "asc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"Nuevo Crucero Actualizado\",\r\n        \"compania\": \"Royal Caribean\",\r\n        \"capacidad\": 150,\r\n        \"origen\": \"Bahamas\",\r\n        \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n        \"img2\": \"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n        \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n        \"detalles\": \"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/tours?criterio=fecha_salida&orden=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"tours"
+					],
+					"query": [
+						{
+							"key": "criterio",
+							"value": "fecha_salida"
+						},
+						{
+							"key": "orden",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"Nuevo Crucero Actualizado\",\r\n        \"compania\": \"Royal Caribean\",\r\n        \"capacidad\": 150,\r\n        \"origen\": \"Bahamas\",\r\n        \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n        \"img2\": \"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n        \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n        \"detalles\": \"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/cruceros?criterio=ID&orden=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"cruceros"
+					],
+					"query": [
+						{
+							"key": "criterio",
+							"value": "ID"
+						},
+						{
+							"key": "orden",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"Nuevo Crucero Actualizado\",\r\n        \"compania\": \"Royal Caribean\",\r\n        \"capacidad\": 150,\r\n        \"origen\": \"Bahamas\",\r\n        \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n        \"img2\": \"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n        \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n        \"detalles\": \"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/cruceros?criterio=capacidad",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"cruceros"
+					],
+					"query": [
+						{
+							"key": "criterio",
+							"value": "capacidad"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"Nuevo Crucero Actualizado\",\r\n        \"compania\": \"Royal Caribean\",\r\n        \"capacidad\": 150,\r\n        \"origen\": \"Bahamas\",\r\n        \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n        \"img2\": \"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n        \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n        \"detalles\": \"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/tours?filtrar=precio&valor=2000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"tours"
+					],
+					"query": [
+						{
+							"key": "filtrar",
+							"value": "precio"
+						},
+						{
+							"key": "valor",
+							"value": "2000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost/cruceros_api/cruceros",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODUwMjA1NiwiZXhwIjoxNjg4NTAzODU2LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.v7U8VLbqkUU4LOHDR7itbgOiO2kLn6NpuiFKv5MRZtA=",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"nombre\": \"Nuevo Crucero Actualizado\",\r\n        \"compania\": \"Royal Caribean\",\r\n        \"capacidad\": 150,\r\n        \"origen\": \"Bahamas\",\r\n        \"img1\": \"https://media-cdn.tripadvisor.com/media/photo-m/1280/15/3b/2f/64/cc-oasis-of-the-seas.jpg\",\r\n        \"img2\": \"https://www.ship-technology.com/wp-content/uploads/sites/8/2021/04/Image_1-Oasis_of_the_Seas1.jpg\",\r\n        \"descripcion\": \"El crucero Nuevo Crucero de Royal Caribbean es una emocionante opción con capacidad para 150 pasajeros. Parte desde las Bahamas y ofrece una experiencia única en el Caribe.¡Embárcate y disfruta de lujo y diversión sinigual!\",\r\n        \"detalles\": \"El Nuevo Crucero de la reconocida compañía Royal Caribbean es una emocionante opción para aquellos que buscan una experiencia única en alta\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/cruceros_api/cruceros?filtrar=capacidad&valor=2000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"cruceros_api",
+						"cruceros"
+					],
+					"query": [
+						{
+							"key": "filtrar",
+							"value": "capacidad"
+						},
+						{
+							"key": "valor",
+							"value": "2000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
