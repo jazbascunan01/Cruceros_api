@@ -12,6 +12,7 @@
 	1. [Tours](#Tours)
     	1. [Métodos admitidos: GET, POST](#tours-m%C3%A9todos-admitidos-get-post)
         2. [Métodos admitidos: GET, DELETE, PUT](#tours-m%C3%A9todos-admitidos-get-delete-put)
+3.[Autenticación y autorización](#-autenticaci%C3%B3n-y-autorizaci%C3%B3n-)
 
 3. [CRUD de Cruceros](#crud-de-cruceros)
 	1. [Obtener todos los cruceros](#obtener-todos-los-cruceros-(get-cruceros))
