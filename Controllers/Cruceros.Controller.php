@@ -99,7 +99,7 @@ class CrucerosController extends ApiController
         $cruceroNuevo = $this->crucerosmodel->getCrucero($crucero_id);
 
         if ($cruceroNuevo)
-            $this->view->response($cruceroNuevo, 200);
+            $this->view->response($cruceroNuevo, 201);
         else
             $this->view->response("Error al insertar crucero", 500);
 
