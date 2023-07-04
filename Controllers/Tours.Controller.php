@@ -93,6 +93,7 @@ class ToursController extends ApiController
 
     public function deleteTour($params = null)
     {
+        $this -> comprobarUsuarioValido();
         $id = $params[':ID'];
         $tour = $this->toursmodel->getTour($id);
         if ($tour) {
@@ -104,6 +105,7 @@ class ToursController extends ApiController
 
     public function addTour($params = [])
     {
+        $this -> comprobarUsuarioValido();
         $tour = $this->getData(); // la obtengo del body
 
         // inserta el tour
@@ -122,6 +124,7 @@ class ToursController extends ApiController
 
     public function updateTour($params = [])
     {
+        $this -> comprobarUsuarioValido();
         $tour_id = $params[':ID'];
         $tour = $this->toursmodel->getTour($tour_id);
 
@@ -140,6 +143,13 @@ class ToursController extends ApiController
             $this->view->response("Tour id=$tour_id actualizado con éxito", 200);
         } else
             $this->view->response("Tour id=$tour_id not found", 404);
+    }
+    public function comprobarUsuarioValido(){
+        $helper = new usuariosHelper();
+        if(!($helper->validarPermisos())){
+            $this -> view -> response("no posee permisos para realizar esta accion",401);
+            die();
+        }
     }
 
 }

@@ -40,7 +40,7 @@ class usuariosHelper
             // Fecha de emisión del token
             'exp' => time() + 1800,
             // Fecha de vencimiento del token (1/2 hora)
-            'data' => $usuario->nombre_usuario 
+            'data' => $usuario->nombre_usuario
             // Datos adicionales del usuario
         ];
         // Genera el token JWT
@@ -60,7 +60,14 @@ class usuariosHelper
     private function comprobarToken($token)
     {
         // Divide el token en sus componentes: encabezado, payload y firma
-        [$header, $payload, $signature] = explode('.', $token);
+        $tokenParts = explode('.', $token);
+
+        // Verifica que el token tenga los tres componentes necesarios
+        if (count($tokenParts) !== 3) {
+            return null;
+        }
+
+        [$header, $payload, $signature] = $tokenParts;
 
         // Decodifica el encabezado y el payload
         $payloadData = json_decode(base64_decode($payload), true);
@@ -69,7 +76,6 @@ class usuariosHelper
         $hash = hash_hmac('sha256', "$header.$payload", $this->secretKey, true);
         $signatureData = base64_decode($signature);
         $isSignatureValid = hash_equals($hash, $signatureData);
-
         if ($isSignatureValid) {
             // Verifica la fecha de vencimiento
             $currentTimestamp = time();

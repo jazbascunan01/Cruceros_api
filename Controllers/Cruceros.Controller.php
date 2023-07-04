@@ -91,6 +91,7 @@ class CrucerosController extends ApiController
 
     public function addCrucero($params = [])
     {
+        $this -> comprobarUsuarioValido();
         $crucero = $this->getData(); // la obtengo del body
         // inserta el crucero
         $crucero_id = $this->crucerosmodel->save($crucero->nombre, $crucero->compania, $crucero->capacidad, $crucero->origen, $crucero->img1, $crucero->img2, $crucero->descripcion, $crucero->detalles);
@@ -107,6 +108,7 @@ class CrucerosController extends ApiController
 
     public function deleteCrucero($params = null)
     {
+        $this -> comprobarUsuarioValido();
         $id = $params[':ID'];
         $crucero = $this->crucerosmodel->getCrucero($id);
         if ($crucero) {
@@ -118,6 +120,7 @@ class CrucerosController extends ApiController
 
     public function updateCrucero($params = [])
     {
+        $this -> comprobarUsuarioValido();
         $crucero_id = $params[':ID'];
         $crucero = $this->crucerosmodel->getCrucero($crucero_id);
 
@@ -136,6 +139,14 @@ class CrucerosController extends ApiController
             $this->view->response("Crucero id=$crucero_id actualizado con éxito", 200);
         } else
             $this->view->response("Crucero id=$crucero_id not found", 404);
+    }
+
+    public function comprobarUsuarioValido(){
+        $helper = new usuariosHelper();
+        if(!($helper->validarPermisos())){
+            $this -> view -> response("no posee permisos para realizar esta accion",401);
+            die();
+        }
     }
 
 }
