@@ -1,6 +1,6 @@
 <?php
 require_once("Models/Cruceros.Model.php");
-require_once("Views/Cruceros.View.php");
+require_once("Views/Api.View.php");
 require_once("Api.Controller.php");
 
 class CrucerosController extends ApiController
@@ -15,10 +15,10 @@ class CrucerosController extends ApiController
             } else {
                 if (isset($_REQUEST['pagina']) && isset($_REQUEST['filas'])) {
                     $cruceros = $this->paginate($_REQUEST['pagina'], $_REQUEST['filas']);
-                    $this->crucerosview->response($cruceros, 200);
+                    $this->view->response($cruceros, 200);
                 } else {
                     $cruceros = $this->crucerosmodel->getcruceros();
-                    $this->crucerosview->response($cruceros, 200);
+                    $this->view->response($cruceros, 200);
                 }
             }
         }
@@ -29,14 +29,14 @@ class CrucerosController extends ApiController
             if (isset($_REQUEST['orden']) && !empty($_REQUEST['orden'])) {
                 $orden = $_REQUEST['orden'];
                 $cruceros = $this->crucerosmodel->GetSortedCruceros($criterio, $orden);
-                $this->crucerosview->response($cruceros, 200);
+                $this->view->response($cruceros, 200);
             } else {
                 $orden = "ASC"; // se ordena ascendente por defecto
                 $cruceros = $this->crucerosmodel->GetSortedCruceros($criterio, $orden);
-                $this->crucerosview->response($cruceros, 200);
+                $this->view->response($cruceros, 200);
             }
         } else {
-            return $this->crucerosview->response("Verificar la columna/atributo de la tabla elegida como criterio", 404);
+            return $this->view->response("Verificar la columna/atributo de la tabla elegida como criterio", 404);
         }
     }
 
@@ -45,12 +45,12 @@ class CrucerosController extends ApiController
         if ($this->verifyAttributes($filtro) && isset($_REQUEST['valor'])) {
             $cruceros = $this->crucerosmodel->GetFilteredCruceros($filtro, $_REQUEST['valor']);
             if ($cruceros) {
-                $this->crucerosview->response($cruceros, 200);
+                $this->view->response($cruceros, 200);
             } else {
-                $this->crucerosview->response("No se encontraron cruceros filtrados", 404);
+                $this->view->response("No se encontraron cruceros filtrados", 404);
             }
         } else {
-            return $this->crucerosview->response("Verificar el filtro y el valor del filtro", 400);
+            return $this->view->response("Verificar el filtro y el valor del filtro", 400);
         }
     }
 
@@ -63,10 +63,10 @@ class CrucerosController extends ApiController
                 $cruceros = $this->crucerosmodel->getPaginatedCruceros($inicio, $filas);
                 return $cruceros;
             } else {
-                return $this->crucerosview->response("La página solicitada con esa cantidad de filas no contiene elementos", 404);
+                return $this->view->response("La página solicitada con esa cantidad de filas no contiene elementos", 404);
             }
         } else {
-            return $this->crucerosview->response("Verificar la forma de los parámetros utilizados", 404);
+            return $this->view->response("Verificar la forma de los parámetros utilizados", 404);
         }
     }
 
@@ -84,9 +84,9 @@ class CrucerosController extends ApiController
 
         $crucero = $this->crucerosmodel->getCrucero($id);
         if ($crucero)
-            $this->crucerosview->response($crucero, 200);
+            $this->view->response($crucero, 200);
         else
-            $this->crucerosview->response("El crucero con el id={$id} no existe", 404);
+            $this->view->response("El crucero con el id={$id} no existe", 404);
     }
 
     public function addCrucero($params = [])
@@ -99,9 +99,9 @@ class CrucerosController extends ApiController
         $cruceroNuevo = $this->crucerosmodel->getCrucero($crucero_id);
 
         if ($cruceroNuevo)
-            $this->crucerosview->response($cruceroNuevo, 200);
+            $this->view->response($cruceroNuevo, 200);
         else
-            $this->crucerosview->response("Error al insertar crucero", 500);
+            $this->view->response("Error al insertar crucero", 500);
 
     }
 
@@ -111,9 +111,9 @@ class CrucerosController extends ApiController
         $crucero = $this->crucerosmodel->getCrucero($id);
         if ($crucero) {
             $this->crucerosmodel->delete($id);
-            $this->crucerosview->response("El crucero fue borrado con exito.", 200);
+            $this->view->response("El crucero fue borrado con exito.", 200);
         } else
-            $this->crucerosview->response("El crucero con el id={$id} no existe", 404);
+            $this->view->response("El crucero con el id={$id} no existe", 404);
     }
 
     public function updateCrucero($params = [])
@@ -133,9 +133,9 @@ class CrucerosController extends ApiController
             $descripcion = $body->descripcion;
             $detalles = $body->detalles;
             $crucero = $this->crucerosmodel->ActualizarCrucero($crucero_id, $nombre, $compania, $capacidad, $origen, $img1, $img2, $descripcion, $detalles);
-            $this->crucerosview->response("Crucero id=$crucero_id actualizado con éxito", 200);
+            $this->view->response("Crucero id=$crucero_id actualizado con éxito", 200);
         } else
-            $this->crucerosview->response("Crucero id=$crucero_id not found", 404);
+            $this->view->response("Crucero id=$crucero_id not found", 404);
     }
 
 }

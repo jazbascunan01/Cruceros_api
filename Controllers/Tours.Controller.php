@@ -1,6 +1,6 @@
 <?php
 require_once("Models/Tours.Model.php");
-require_once("Views/Tours.View.php");
+require_once("Views/Api.View.php");
 require_once("Api.Controller.php");
 
 class ToursController extends ApiController
@@ -16,10 +16,10 @@ class ToursController extends ApiController
             } else {
                 if (isset($_REQUEST['pagina']) && isset($_REQUEST['filas'])) {
                     $tours = $this->paginate($_REQUEST['pagina'], $_REQUEST['filas']);
-                    $this->toursview->response($tours, 200);
+                    $this->view->response($tours, 200);
                 } else {
                     $tours = $this->toursmodel->getAllTours();
-                    $this->toursview->response($tours, 200);
+                    $this->view->response($tours, 200);
                 }
             }
         }
@@ -31,14 +31,14 @@ class ToursController extends ApiController
             if (isset($_REQUEST['orden']) && !empty($_REQUEST['orden'])) {
                 $orden = $_REQUEST['orden'];
                 $tours = $this->toursmodel->GetSortedTours($criterio, $orden);
-                $this->toursview->response($tours, 200);
+                $this->view->response($tours, 200);
             } else {
                 $orden = "ASC"; // se ordena ascendente por defecto
                 $tours = $this->toursmodel->GetSortedTours($criterio, $orden);
-                $this->toursview->response($tours, 200);
+                $this->view->response($tours, 200);
             }
         } else {
-            return $this->toursview->response("Verificar la columna/atributo de la tabla elegida como criterio", 404);
+            return $this->view->response("Verificar la columna/atributo de la tabla elegida como criterio", 404);
         }
     }
 
@@ -47,12 +47,12 @@ class ToursController extends ApiController
         if ($this->verifyAttributes($filtro) && isset($_REQUEST['valor'])) {
             $tours = $this->toursmodel->GetFilteredTours($filtro, $_REQUEST['valor']);
             if ($tours) {
-                $this->toursview->response($tours, 200);
+                $this->view->response($tours, 200);
             } else {
-                $this->toursview->response("No se encontraron tours filtrados", 404);
+                $this->view->response("No se encontraron tours filtrados", 404);
             }
         } else {
-            return $this->toursview->response("Verificar el filtro y el valor del filtro", 400);
+            return $this->view->response("Verificar el filtro y el valor del filtro", 400);
         }
     }
 
@@ -66,10 +66,10 @@ class ToursController extends ApiController
                 echo("HOLA");
                 return $tours;
             } else {
-                return $this->toursview->response("La página solicitada con esa cantidad de filas no contiene elementos", 404);
+                return $this->view->response("La página solicitada con esa cantidad de filas no contiene elementos", 404);
             }
         } else {
-            return $this->toursview->response("Verificar la forma de los parámetros utilizados", 404);
+            return $this->view->response("Verificar la forma de los parámetros utilizados", 404);
         }
     }
 
@@ -86,9 +86,9 @@ class ToursController extends ApiController
 
         $tour = $this->toursmodel->getTour($id);
         if ($tour)
-            $this->toursview->response($tour, 200);
+            $this->view->response($tour, 200);
         else
-            $this->toursview->response("El tour con el id={$id} no existe", 404);
+            $this->view->response("El tour con el id={$id} no existe", 404);
     }
 
     public function deleteTour($params = null)
@@ -97,9 +97,9 @@ class ToursController extends ApiController
         $tour = $this->toursmodel->getTour($id);
         if ($tour) {
             $this->toursmodel->delete($id);
-            $this->toursview->response("El tour fue borrado con exito.", 200);
+            $this->view->response("El tour fue borrado con exito.", 200);
         } else
-            $this->toursview->response("El tour con el id={$id} no existe", 404);
+            $this->view->response("El tour con el id={$id} no existe", 404);
     }
 
     public function addTour($params = [])
@@ -113,9 +113,9 @@ class ToursController extends ApiController
         $tourNuevo = $this->toursmodel->getTour($tour_id);
 
         if ($tourNuevo)
-            $this->toursview->response($tourNuevo, 200);
+            $this->view->response($tourNuevo, 200);
         else
-            $this->toursview->response("Error al insertar tour", 500);
+            $this->view->response("Error al insertar tour", 500);
 
     }
 
@@ -137,9 +137,9 @@ class ToursController extends ApiController
             $img2 = $body->img2;
             $detalles = $body->detalles;
             $tour = $this->toursmodel->ActualizarTour($tour_id, $id_crucero, $destino, $fecha_salida, $precio, $descripcion, $img1, $img2, $detalles);
-            $this->toursview->response("Tour id=$tour_id actualizado con éxito", 200);
+            $this->view->response("Tour id=$tour_id actualizado con éxito", 200);
         } else
-            $this->toursview->response("Tour id=$tour_id not found", 404);
+            $this->view->response("Tour id=$tour_id not found", 404);
     }
 
 }
