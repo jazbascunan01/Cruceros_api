@@ -21,7 +21,7 @@ class UsuariosController extends ApiController
                 $this->view->response($token, 200);
             }
             else
-                $this->view->response("usuario o contraseña incorrecto/s", 400);    
+                $this->view->response("usuario o contraseña incorrecto/s", 401);    
         }    
     }
 }
