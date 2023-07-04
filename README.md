@@ -120,6 +120,16 @@ Enviando las credenciales de usuario (nombre de usuario y contraseña) en el cue
 		"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODQ5MTI3NSwiZXhwIjoxNjg4NDkzMDc1LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.AlnKx38bPmhtVsZ4e4MEI32WD+z4IFAr8sBvAvvxksc="
     }
 
+##### Los usuarios y contraseñas con permisos habilitados para solicitar el token son:
+
+<div align="center">
+
+|   USERNAME    |   PASSWORD   |
+|--------------|--------------|
+| admin@admin.com |   admin   |
+</div>
+
+
 ### Uso del Token de Acceso
 
 Una vez que hayas obtenido el token de acceso, debes incluirlo en el encabezado Authorization indicando el tipo `Bearer Token` de todas tus solicitudes a los recursos protegidos.
