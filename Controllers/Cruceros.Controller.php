@@ -63,7 +63,7 @@ class CrucerosController extends ApiController
                 $cruceros = $this->crucerosmodel->getPaginatedCruceros($inicio, $filas);
                 return $cruceros;
             } else {
-                return $this->view->response("La página solicitada con esa cantidad de filas no contiene elementos", 404);
+                return $this->view->response("La página solicitada con ESA CANTIDAD DE FILAS no contiene elementos", 404);
             }
         } else {
             return $this->view->response("Verificar la forma de los parámetros utilizados", 404);
