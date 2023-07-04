@@ -93,6 +93,32 @@ La URL base de la API es:
 
 **Descripción:** Este recurso permite obtener información sobre un tour específico, eliminar un tour o actualizar los detalles de un tour existente.
 
+----------------------------
+
+## <h2 align="center"> Autenticación y Autorización </h2>
+
+La API utiliza un mecanismo de autenticación basado en tokens para asegurar el acceso a los recursos protegidos. Cada solicitud a la API debe incluir un encabezado Authorization con el valor del token de acceso.
+
+El token de acceso se obtiene mediante el siguiente endpoint:
+`POST /usuarios`
+Enviando las credenciales de usuario (nombre de usuario y contraseña) en el cuerpo de la solicitud. Si las credenciales son válidas, se devuelve un token de acceso que debe utilizarse en las solicitudes posteriores.
+###### Ruta para obtener el token: 
+`POST /usuarios`
+###### Cuerpo de la solicitud:
+    {
+	    "nombre_usuario":"admin@admin.com",
+	    "password":"admin"
+    }
+###### Respuesta:
+
+    {
+		"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImlhdCI6MTY4ODQ5MTI3NSwiZXhwIjoxNjg4NDkzMDc1LCJkYXRhIjoiYWRtaW5AYWRtaW4uY29tIn0=.AlnKx38bPmhtVsZ4e4MEI32WD+z4IFAr8sBvAvvxksc="
+    }
+
+##### Uso del Token de Acceso
+
+Una vez que hayas obtenido el token de acceso, debes incluirlo en el encabezado Authorization indicando el tipo `Bearer Token` de todas tus solicitudes a los recursos protegidos.
+
 --------------------
 ## <h2 align="center"> CRUD de Cruceros</h2>
 
